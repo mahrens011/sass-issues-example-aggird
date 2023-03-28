@@ -1,0 +1,23 @@
+@use "~ag-grid-community/styles" as ag;
+
+.some-custom-class {
+  @include ag.grid-styles((
+    theme: custom-react,
+    extend-theme: alpine,
+    --ag-header-background-color: rgb(234, 191, 177),
+    --ag-header-height: 80px,
+    --ag-alpine-active-color: red,
+  ));
+
+  width: 100%;
+  height: 100%;
+
+  .ag-theme-custom-react {
+    .ag-cell {
+      line-height: 24px;
+    }
+    .ag-header-cell {
+      font-style: italic;
+    }
+  }
+}
